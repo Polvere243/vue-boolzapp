@@ -8,8 +8,16 @@
 
 /* generici */
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 h3{
-    font-weight: normal;
+    
+    font-size: 12px;
 }
 
 body{
@@ -39,6 +47,11 @@ ul{
     list-style-type: none;
     display: flex;
     gap: 10px;
+    margin-right: 10px;
+}
+
+ul i{
+    color: gray;
 }
 
 .fa-bell-slash{
@@ -46,10 +59,14 @@ ul{
     color: rgb(145, 212, 239);
 }
 
+a{
+    color: gray;
+}
+
 /* utili */
 
 .border{
-    border: 1px solid black;
+    border-right: 1px solid blue;
 }
 
 .auto{
@@ -74,6 +91,15 @@ ul{
     border-radius: 50%;
     line-height: 50px;
     text-align: center;
+    margin-left: 15px;
+}
+
+.line-height{
+    line-height: 2;
+}
+
+.mt{
+    margin-top: 15px;
 }
 
 /* sezione contatti */
@@ -90,10 +116,26 @@ ul{
 #notifications{
     background-color: rgb(145, 212, 239);
     min-height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .glass-icon{
     background-color: white;
+    padding: 5px 20px;
+}
+
+input{
+    border: none;
+    padding: 6px 30px;
 }
 
 .chat-box{
