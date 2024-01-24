@@ -3,9 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* background color */
+/* generici */
+
+h3{
+    font-weight: normal;
+}
 
 body{
     background-image: linear-gradient(to bottom, rgb(71, 190, 112), grey);
@@ -14,6 +19,31 @@ body{
 #root {
     height: 100vh;
     padding-top: 20px;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    background-color: rgb(239, 226, 226);
+}
+
+img{
+    max-width: 50px;
+    border-radius: 50%;
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.fa-bell-slash{
+    font-size: 18px;
+    color: rgb(145, 212, 239);
 }
 
 /* utili */
@@ -26,14 +56,24 @@ body{
     overflow: auto;
 }
 
-/* contenitore principale */
-
-.container{
-    max-width: 1080px;
-    margin: 0 auto;
-    height: 90vh;
+.d-flex{
     display: flex;
-    background-color: rgb(239, 226, 226);
+    justify-content: space-between;
+}
+
+.baseline{
+    display: flex;
+    align-items: baseline;
+}
+
+.white{
+    background-color: white;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
 }
 
 /* sezione contatti */
@@ -43,14 +83,13 @@ body{
     flex-shrink: 0;
 }
 
-.chat{
-    flex-grow: 1;
-
+.contacts-header{
+    padding: 5px 0 5px 10px;
 }
 
-
 #notifications{
-    background-color: dodgerblue;
+    background-color: rgb(145, 212, 239);
+    min-height: 70px;
 }
 
 .glass-icon{
@@ -63,21 +102,25 @@ body{
 
 /* sezione chat */
 
+.chat{
+    flex-grow: 1;
+
+}
+
 .chat-header,
 .chat-footer{
     position: sticky;
     left: 0;
     right: 0;
+    height: 60px;
 }
 
 .chat-header{
     top: 0;
-    height: 50px;
 }
 
 .chat-footer{
     bottom: 0;
-    height: 50px;
 }
 
 main.auto{
