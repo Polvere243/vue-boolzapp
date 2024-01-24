@@ -35,6 +35,7 @@ body{
 
 .contacts{
     flex-basis: 350px;
+    flex-shrink: 0;
 }
 
 .chat{
