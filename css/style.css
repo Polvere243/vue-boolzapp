@@ -4,3 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* background color */
+
+#root {
+    background-image: linear-gradient(to bottom, rgb(71, 190, 112), grey);
+}
