@@ -7,6 +7,36 @@
 
 /* background color */
 
-#root {
+body{
     background-image: linear-gradient(to bottom, rgb(71, 190, 112), grey);
+}
+
+#root {
+    height: 100vh;
+    padding-top: 20px;
+}
+
+/* utili */
+
+.border{
+    border: 1px solid black;
+}
+
+/* contenitore principale */
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+}
+
+/* sezioni interne */
+
+.contacts{
+    flex-basis: 350px;
+}
+
+.chat{
+    flex-grow: 1;
 }
