@@ -199,39 +199,62 @@ button{
     flex-shrink: 0;
 }
 
+/* footer */
+
 .chat-footer input{
     width: 90%;
-    height: 50%
+    height: 50%;
+    padding-left: 10px;
 }
 
 footer i{
     font-size: 18px;
 }
 
+/* chat */
+
 main.auto{
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
+
 }
 
 .message-list{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100%;
+    margin-top: 40px;
 }
 
-.message-list li{
+.message-list li.sent{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-list li.received{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.m-box{
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.message-list li.sent{
+.end{
     background-color: rgb(149, 236, 125);
-    justify-content: flex-end;
+    margin-right: 30px;
 }
 
-.message-list li.received{
+.start{
     background-color: white;
-    justify-content: flex-start;
+    margin-left: 30px;
+}
+
+time{
+    display: block;
+    text-align: right;
+    color: lightgray;
+    font-size: 12px;
 }
