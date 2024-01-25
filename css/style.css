@@ -90,9 +90,11 @@ button{
     justify-content: space-between;
 }
 
-.baseline{
+.center{
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .white{
@@ -191,17 +193,23 @@ button{
 
 
 
-.chat-header{
+.chat-header,
+.chat-footer{
     height: 60px;
     flex-shrink: 0;
 }
 
-.chat-footer{
-    height: 60px;
-    flex-shrink: 0;
+.chat-footer input{
+    width: 90%;
+    height: 50%
+}
+
+footer i{
+    font-size: 18px;
 }
 
 main.auto{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 100px);
 }
+
