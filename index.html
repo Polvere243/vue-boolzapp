@@ -19,23 +19,38 @@
     </head>
     <body>
         <div id="root">
+            <!-- div contenitore per vue -->
             <div class="container">
+                <!-- contenitore web app -->
                 <div class="contacts border">
+                    <!-- lato dei contatti -->
                     <header class="contacts-header d-flex">
                         <nav>
-                            <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
-                            <h3>Nome Utente</h3>
+                            <!-- icona e nome utente -->
+                            <figure>
+                                <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
+                                <figcaption>
+                                    <h3>Nome Utente</h3>
+                                </figcaption>
+                            </figure>
                         </nav>
                         <nav>
+                            <!-- lista di icone  -->
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <button>
+                                        <i class="fa-solid fa-circle-notch pointer"></i>
+                                    </button>
                                 </li>
                                 <li>
-                                    <i class="fa-solid fa-message"></i>
+                                    <button>
+                                        <i class="fa-solid fa-message pointer"></i>
+                                    </button>
                                 </li>
                                 <li>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    <button>
+                                        <i class="fa-solid fa-ellipsis-vertical pointer"></i>
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
@@ -51,33 +66,22 @@
                             </span>
                             
                         </section>
-                        <section id="search-chat" class="mt">
-                            <div>
-                                <span class="glass-icon">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </span>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
-                            </div>
+                        <section id="search-chat">
+                            <i class="fa-solid fa-magnifying-glass input-glass pointer"></i>
+                            <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
                         </section>
                         <section>
                             <div class="chat-box auto">
                                 <ul>
                                     <li>
-                                        <img src="" alt="">
-                                        <h3></h3>
+                                        <figure>
+                                            <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
+                                            <figcaption>
+                                                <h3>Nome Utente</h3>
+                                            </figcaption>
+                                        </figure>
                                     </li>
-                                    <li>
-                                        <img src="" alt="">
-                                        <h3></h3>
-                                    </li>
-                                    <li>
-                                        <img src="" alt="">
-                                        <h3></h3>
-                                    </li>
-                                    <li>
-                                        <img src="" alt="">
-                                        <h3></h3>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </section>
@@ -92,22 +96,34 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <button>
+                                        <i class="fa-solid fa-magnifying-glass pointer"></i>
+                                    </button>
                                 </li>
                                 <li>
-                                    <i class="fa-solid fa-paperclip"></i>
+                                    <button>
+                                        <i class="fa-solid fa-paperclip pointer"></i>
+                                    </button>
                                 </li>
                                 <li>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    <button>
+                                        <i class="fa-solid fa-ellipsis-vertical pointer"></i>
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
                     </header>
-                    <main class="auto"></main>
+                    <main class="auto">
+                        
+                    </main>
                     <footer class="chat-footer">
-                        <i class="fa-regular fa-face-smile"></i>
+                        <button>
+                            <i class="fa-regular fa-face-smile pointer"></i>
+                        </button>    
                         <input type="text" placeholder="Scrivi un messaggio">
-                        <i class="fa-solid fa-microphone"></i>
+                        <button>
+                            <i class="fa-solid fa-microphone pointer"></i>
+                        </button>
                     </footer>
                 </div>
             </div>

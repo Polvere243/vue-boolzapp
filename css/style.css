@@ -12,7 +12,13 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+figure{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 h3{
@@ -21,7 +27,7 @@ h3{
 }
 
 body{
-    background-image: linear-gradient(to bottom, rgb(71, 190, 112), grey);
+    background-image: linear-gradient(to bottom, rgb(71, 190, 112) 15%, rgb(212, 208, 208) 15%);
 }
 
 #root {
@@ -63,6 +69,12 @@ a{
     color: gray;
 }
 
+button{
+    border: none;
+    padding: 0;
+    background: none;
+}
+
 /* utili */
 
 .border{
@@ -102,6 +114,10 @@ a{
     margin-top: 15px;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 /* sezione contatti */
 
 .contacts{
@@ -123,19 +139,24 @@ a{
 }
 
 #search-chat{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50px;
+    position: relative;
+    padding: 10px;
 }
 
-.glass-icon{
-    background-color: white;
-    padding: 5px 20px;
+.input-glass{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
 }
 
-input{
+.search-bar{
     border: none;
-    padding: 6px 30px;
+    padding-left: 45px;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .chat-box{
@@ -149,20 +170,16 @@ input{
 
 }
 
-.chat-header,
-.chat-footer{
-    position: sticky;
-    left: 0;
-    right: 0;
-    height: 60px;
-}
+
 
 .chat-header{
-    top: 0;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 .chat-footer{
-    bottom: 0;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 main.auto{
