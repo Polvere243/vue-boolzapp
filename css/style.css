@@ -118,14 +118,20 @@ button{
     cursor: pointer;
 }
 
+.height{
+    height: 100%;
+}
+
 /* sezione contatti */
 
 .contacts{
     flex-basis: 350px;
     flex-shrink: 0;
+    
 }
 
-.contacts-header{
+.contacts-header,
+.chat-header{
     padding: 5px 0 5px 10px;
 }
 
@@ -163,11 +169,24 @@ button{
     background-color: white;
 }
 
+.chat-box ul{
+    display: block;
+}
+
+.chat-box ul li{
+    margin: 10px 0;
+}
+
+.chat-box ul li:hover {
+    background-color: rgba(211, 211, 211, 0.566);
+}
+
 /* sezione chat */
 
 .chat{
     flex-grow: 1;
-
+    display: flex;
+    flex-direction: column;
 }
 
 
