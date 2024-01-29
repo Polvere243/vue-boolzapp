@@ -28,7 +28,7 @@
                         <nav>
                             <!-- icona e nome utente -->
                             <figure>
-                                <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
+                                <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                                 <figcaption>
                                     <h3>Nome Utente</h3>
                                 </figcaption>
@@ -73,19 +73,17 @@
                         </section>
                         <section class="chat-box auto">
                             <!-- lista chat aperte -->
-                            <div>
-                                <ul>
-                                    <li class="pointer">
-                                        <figure>
-                                            <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
-                                            <figcaption>
-                                                <h3>Nome Utente</h3>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
+                            <ul>
+                                <li class="pointer" v-for="contact in contacts">
+                                    <figure>
+                                        <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+                                        <figcaption>
+                                            <h3>{{ contact.name }}</h3>
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            
                         </section>
                     </main>
                 </div>

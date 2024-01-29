@@ -169,7 +169,10 @@ button{
 
 .chat-box{
     background-color: white;
+    height: 375px;
 }
+
+
 
 .chat-box ul{
     display: block;
