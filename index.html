@@ -30,7 +30,7 @@
                             <figure>
                                 <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                                 <figcaption>
-                                    <h3>Nome Utente</h3>
+                                    <h3>{{user.name}}</h3>
                                 </figcaption>
                             </figure>
                         </nav>
@@ -68,13 +68,13 @@
                         </section>
                         <section id="search-chat">
                             <!-- barra di ricerca -->
-                            <i class="fa-solid fa-magnifying-glass input-glass pointer"></i>
-                            <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <i class="fa-solid fa-magnifying-glass input-glass pointer" v-on:click=""></i>
+                            <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model.trim="searchText">
                         </section>
                         <section class="chat-box auto">
                             <!-- lista chat aperte -->
                             <ul>
-                                <li class="pointer" v-for="contact in contacts">
+                                <li class="pointer" v-for="contact in filteredContacts" :key="contact.id" v-on:click="setActiveId(contact.id)">
                                     <figure>
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                         <figcaption>
@@ -93,9 +93,9 @@
                         <nav>
                             <!-- nome e immagine dell'utente in questione -->
                             <figure>
-                                <img src="img/avatar_io.jpg" alt="Avatar donna colla coda">
+                                <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                                 <figcaption>
-                                    <h3>Nome Utente</h3>
+                                    <h3>{{ user.name }}</h3>
                                 </figcaption>
                             </figure>
                         </nav>
@@ -123,16 +123,16 @@
                     <main class="auto">
                         <!-- sezione della chat vera e propria -->
                         <ul class="message-list">
-                            <li class="message sent">
+                            <li v-for="message in contacts.messages" :key="message.id" :class="message.status" class="message sent">
                                 <div class="m-box end">
-                                    <p>Prova messaggio inviato</p>
-                                    <time detetime="2024-01-25 18:05">10-01-2020 15:30:55</time>
+                                    <p>{{message.text}}</p>
+                                    <time detetime="2024-01-25 18:05">{{message.date}}</time>
                                 </div>    
                             </li>
-                            <li class="message received">
+                            <li v-for="message in contacts.messages" :key="message.id" :class="message.status" class="message received">
                                 <div class="m-box start">
-                                    <p>Prova messaggio ricevuto</p>
-                                    <time detetime="2024-01-25 18:05">10-01-2020 16:15:22</time>
+                                    <p>{{message.text}}</p>
+                                    <time detetime="2024-01-25 18:05">{{message.date}}</time>
 
                                 </div>
                             </li>
