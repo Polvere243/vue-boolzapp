@@ -74,7 +74,7 @@
                         <section class="chat-box auto">
                             <!-- lista chat aperte -->
                             <ul>
-                                <li class="pointer" v-for="contact in filteredContacts" :key="contact.id" v-on:click="setActiveId(contact.id)">
+                                <li class="pointer" v-for="(contact, id) in filteredContacts" :key="contact.id" v-on:click="setActiveId(contact.id)">
                                     <figure>
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                         <figcaption>
@@ -143,7 +143,7 @@
                         <button>
                             <i class="fa-regular fa-face-smile pointer"></i>
                         </button>    
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newText" on-keyup.enter="createNewMessage">
                         <button>
                             <i class="fa-solid fa-microphone pointer"></i>
                         </button>
